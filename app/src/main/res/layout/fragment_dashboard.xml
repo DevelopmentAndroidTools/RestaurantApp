@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.DashboardFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/dashboard_fragment_Progressdialog"
+        android:visibility="invisible"
+        android:elevation="1dp">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:id="@+id/RLSearch"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/rounded_corner_search"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="   Search Restaurants"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:paddingStart="10dp"></EditText>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:id="@+id/dashboard_fragment_cant_find_restaurant"
+        android:visibility="invisible"
+        android:layout_below="@id/RLSearch"
+        android:elevation="1dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/can_t_find_any_restaurant_with_that_name"
+            android:textSize="20sp"
+            android:padding="15dp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLSearch"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+</RelativeLayout>

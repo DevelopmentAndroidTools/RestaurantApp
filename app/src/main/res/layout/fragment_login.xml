@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="fragment.LoginFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/login_fragment_Progressdialog"
+        android:visibility="invisible"
+        android:elevation="1dp">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageViewAppIcon"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_marginBottom="30dp"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_app_icon_log" />
+
+
+        <EditText
+            android:id="@+id/editTextMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewAppIcon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_border_for_view"
+            android:drawableLeft="@drawable/ic_phone"
+            android:drawablePadding="4dp"
+            android:hint="Mobile Number (10 digits)"
+            android:inputType="number"
+            android:maxLength="10"
+
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextMobileNumber"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/rounded_border_for_view"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="4dp"
+            android:hint="Password"
+
+            android:inputType="numberPassword"
+            android:maxLength="8"
+
+            android:padding="10dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editTextPassword"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Login"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/textViewForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonLogin"
+            android:layout_centerHorizontal="true"
+            android:text="Forgot Password?"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Don't have an account?Sign up now"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+
+
+</RelativeLayout>

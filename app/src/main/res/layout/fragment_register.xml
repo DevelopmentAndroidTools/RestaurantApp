@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".fragment.RegisterFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:id="@+id/register_fragment_Progressdialog"
+        android:elevation="1dp"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/coordinatorLayout"
+        >
+
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                android:elevation="0dp"
+                >
+                <!-- elivation raise the appbar and gives a shadow -->
+
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    android:background="@color/colorPrimary"
+                    android:id="@+id/toolBar"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+                    app:layout_scrollFlags="scroll|enterAlways"
+                    />
+                <!--app:layout_scrollFlags="scroll|enterAlways" scrollBar scrolls along with the list-->
+            </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp"
+        >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_border_for_view"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="4dp"
+        android:hint="Name (Min 3 characters)"
+        android:inputType="text"
+        android:maxLength="20"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_border_for_view"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="4dp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextMobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_border_for_view"
+        android:drawableLeft="@drawable/ic_phone"
+        android:drawablePadding="4dp"
+        android:hint="Mobile Number (10 digits)"
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/editTextDeliveryAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_border_for_view"
+        android:drawableLeft="@drawable/ic_location"
+        android:drawablePadding="4dp"
+        android:hint="Delivery Address"
+        android:inputType="text"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextMobileNumber"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_border_for_view"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="4dp"
+        android:hint="Password(Min 6)"
+        android:inputType="numberPassword"
+        android:maxLength="8"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_border_for_view"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="4dp"
+        android:hint="Confirm Password"
+        android:inputType="numberPassword"
+        android:maxLength="8"
+        android:padding="10dp"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Register"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
